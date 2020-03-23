@@ -33,9 +33,9 @@ Are in folder Examples, for all CORAL weights data sets. Performance of weights 
 
 * **Lukáš Dobiš** 
 
-* **Authors of RetinaFace model ** initalization code and weigths https://github.com/biubug6/Pytorch_Retinaface
-* **Authors of CORAL model ** initalization code and weigths https://github.com/Raschka-research-group/coral-cnn
-* **Authors of Gender and Emotion models ** initalization code and weigths https://github.com/kbsriharsha/FacialEmotionAnalysis
+* **Authors of RetinaFace model** initalization code and weigths https://github.com/biubug6/Pytorch_Retinaface
+* **Authors of CORAL model** initalization code and weigths https://github.com/Raschka-research-group/coral-cnn
+* **Authors of Gender and Emotion models** initalization code and weigths https://github.com/kbsriharsha/FacialEmotionAnalysis
 
     
 ## License

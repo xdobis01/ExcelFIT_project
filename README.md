@@ -22,8 +22,7 @@ pip install tensorflow
 Directory with images and directory to save results is mandatory input. Optional inputs are --cpu CPU (default) or --cuda GPU use, CORAL weights training dataset (AFAD,CACD,default MORPH,UTK), --RetinaFace_arch either default MobileNet or ResNet
 
 ```
-python Recognition_net.py --data_folder C:\Python\TEST\testData\Excelobr --save_folder ./TEST/ --RetinaFace_ar
-ch MobileNet --CORAL_weights UTK --device cpu
+python Recognition_net.py --data_folder C:\Python\TEST\testData\Excelobr --save_folder ./TEST/ --RetinaFace_arch MobileNet --CORAL_weights UTK --device cpu
 
 ```
 ### Examples 
@@ -34,9 +33,9 @@ Are in folder Examples, for all CORAL weights data sets. Performance of weights 
 
 * **Lukáš Dobiš** 
 
-Authors of RetinaFace model initalization code and weigths https://github.com/biubug6/Pytorch_Retinaface
-Authors of CORAL model initalization code and weigths https://github.com/Raschka-research-group/coral-cnn
-Authors of Gender and Emotion models model initalization code and weigths https://github.com/kbsriharsha/FacialEmotionAnalysis
+* **Authors of RetinaFace model ** initalization code and weigths https://github.com/biubug6/Pytorch_Retinaface
+* **Authors of CORAL model ** initalization code and weigths https://github.com/Raschka-research-group/coral-cnn
+* **Authors of Gender and Emotion models ** initalization code and weigths https://github.com/kbsriharsha/FacialEmotionAnalysis
 
     
 ## License

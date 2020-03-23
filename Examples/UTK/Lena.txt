@@ -1,0 +1,33 @@
+Lena
+Number of proposed BB: 6
+
+x: 480 
+y: 448 
+w: 237 
+w: 339 
+probability: 0.99933857 
+age: 51 
+gender: woman 
+emotion: neutral 
+left eye - x: 584.8929 ,y: 579.52386 
+right eye - x: 684.56244 ,y: 590.05334 
+nose tip - x: 654.6137 ,y: 668.3789 
+mouth left corner - x: 584.1202 ,y: 709.3444 
+mouth right corner - x: 654.6675 ,y: 718.46814 
+
+
+x: 1387 
+y: 400 
+w: 252 
+w: 370 
+probability: 0.99842834 
+age: 53 
+gender: woman 
+emotion: neutral 
+left eye - x: 1498.5916 ,y: 543.36426 
+right eye - x: 1606.1644 ,y: 560.02386 
+nose tip - x: 1572.0768 ,y: 635.08453 
+mouth left corner - x: 1487.5402 ,y: 670.93536 
+mouth right corner - x: 1579.9181 ,y: 685.6258 
+
+

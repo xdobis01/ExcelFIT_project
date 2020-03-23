@@ -1,0 +1,18 @@
+BGyoung
+Number of proposed BB: 14
+
+x: 610 
+y: 216 
+w: 340 
+w: 441 
+probability: 0.99814165 
+age: 41 
+gender: man 
+emotion: fear 
+left eye - x: 727.239 ,y: 389.5344 
+right eye - x: 881.64294 ,y: 387.93082 
+nose tip - x: 824.3649 ,y: 495.76904 
+mouth left corner - x: 727.48694 ,y: 535.1964 
+mouth right corner - x: 878.0849 ,y: 533.79834 
+
+

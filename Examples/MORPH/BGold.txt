@@ -1,0 +1,18 @@
+BGold
+Number of proposed BB: 2
+
+x: 381 
+y: 148 
+w: 395 
+w: 522 
+probability: 0.99996364 
+age: 38 
+gender: man 
+emotion: happy 
+left eye - x: 526.40955 ,y: 346.37006 
+right eye - x: 703.8468 ,y: 369.47995 
+nose tip - x: 626.22485 ,y: 466.87894 
+mouth left corner - x: 498.3703 ,y: 508.2988 
+mouth right corner - x: 676.08655 ,y: 527.9535 
+
+

@@ -1,6 +1,7 @@
 from __future__ import print_function
 import argparse
 import os
+# os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Torch framework imports
 import torch

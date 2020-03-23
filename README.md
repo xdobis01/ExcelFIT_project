@@ -31,7 +31,7 @@ Are in folder Examples, for all CORAL weights data sets. Performance of weights 
 
 ## Authors
 
-* **Lukáš Dobiš** 
+* **xdobis01 - Lukáš Dobiš** 
 
 * **Authors of RetinaFace model** initalization code and weigths https://github.com/biubug6/Pytorch_Retinaface
 * **Authors of CORAL model** initalization code and weigths https://github.com/Raschka-research-group/coral-cnn

@@ -1,7 +1,6 @@
 from __future__ import print_function
 import argparse
 import os
-# os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Torch framework imports
 import torch
@@ -34,11 +33,11 @@ from keras.preprocessing import image as keras_image
 from fa_utils.preprocessor import preprocess_input
 
 parser = argparse.ArgumentParser(description='Recognition inputs')
-parser.add_argument('--data_folder', type=str, help='Dir to analyze')
-parser.add_argument('--save_folder', type=str, help='Dir to save results')
+parser.add_argument('--data_folder', default= r'./cor_LSTM_test' ,type=str, help='Dir to analyze')
+parser.add_argument('--save_folder', default= './cor_RESULTS_comparison/Author_weights/',type=str, help='Dir to save results')
 parser.add_argument('-m', '--RetinaFace_arch', default='MobileNet', type=str, help='MobileNet or ResNet')
 parser.add_argument('--CORAL_weights', default= 'MORPH' , type=str, help='AFAD,CACD,MORPH,UTK')
-parser.add_argument('--device', default='cpu', type=str, help='Proccesing unit CPU = cpu or GPU = cuda')
+parser.add_argument('--device', default='cuda', type=str, help='Proccesing unit CPU = cpu or GPU = cuda')
 args = parser.parse_args()
 
 #### Misc init
@@ -59,7 +58,7 @@ if __name__ == '__main__':
     save_directory = args.save_folder
     test_directory = args.data_folder
     file_count = sum([len(files) for r, d, files in os.walk(test_directory)])
-    device = args.device
+    device = torch.device(args.device)
 
     ##### RET net and model
 
@@ -123,11 +122,13 @@ if __name__ == '__main__':
                 _t['Image_forward_pass'].tic()
 
                 # Image read
-                image_count+=1
-                face_counter=0
+                image_count += 1
+                face_counter = 0
                 image_path = os.path.join(dirpath,filename)
                 img_raw = cv2.imread(image_path, cv2.IMREAD_COLOR)
                 img = np.float32(img_raw)
+
+                if img.shape[2] < 3: break  # ignore gray images
 
                 # Testing scale
                 target_size = 1600
@@ -201,19 +202,25 @@ if __name__ == '__main__':
                 ######  Facial analysis part #####
                 ##################################
 
-                save_name = save_directory + filename[:-4] + ".txt"
+                save_name = save_directory + '\\' + filename[:-4] + ".txt"
                 dirname   = os.path.dirname(save_name)
                 if not os.path.isdir(dirname):
                     os.makedirs(dirname)
                 file_name = os.path.basename(save_name)[:-4] + "\n"
 
+                u_image = Image.open(image_path)
+                if u_image.mode != 'RGB':
+                   break
+
                 bboxs_num = "Number of proposed BB: " + str(len(bboxs)) + "\n\n"
                 with open(save_name, "w") as fd:
                     fd.write(file_name)
                     fd.write(bboxs_num)
+
                     for box in bboxs:
 
-                        if box[4] < 0.8: continue
+                        if box[4] < 0.97:
+                           continue
                         face_counter+=1
                         x = int(box[0])
                         y = int(box[1])
@@ -224,7 +231,6 @@ if __name__ == '__main__':
 
                         #####  CORAL inference #####
 
-                        u_image = Image.open(image_path)
                         face_image = u_image.crop((box[0], box[1], box[2], box[3]))
 
                         image = coral_transform(face_image)
@@ -302,7 +308,7 @@ if __name__ == '__main__':
                                +"right eye - x: "+str(box[7])+" ,y: "+str(box[8])+" \n"
                                +"nose tip - x: "+str(box[9])+" ,y: "+str(box[10])+" \n"
                                +"mouth left corner - x: "+str(box[11])+" ,y: "+str(box[12])+" \n"
-                               +"mouth right corner - x: "+str(box[13])+" ,y: "+str(box[14])+" \n\n"                              "\n")
+                               +"mouth right corner - x: "+str(box[13])+" ,y: "+str(box[14])+" \n\n""\n")
                         fd.write(line)
 
                         #  Draw predictions onto image
@@ -355,7 +361,7 @@ if __name__ == '__main__':
                                                                          _t['Image_forward_pass'].average_time))
 
                 # save image
-                name = save_directory  + str(image_count) + ".jpg"
+                name = save_directory + '\\'+ str(image_count) + ".jpg"
                 cv2.imwrite(name, img_raw)
 
 

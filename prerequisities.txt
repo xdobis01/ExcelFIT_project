@@ -39,3 +39,4 @@ torch			1.4.0
 torchvision		0.5.0	
 urllib3			1.25.8	
 wheel			0.34.2	
+re

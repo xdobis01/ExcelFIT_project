@@ -6,6 +6,12 @@ This code allows you to iterate over folder of images to detect location of huma
 
 Please download folder cor_weights and ret_weights to your project directory, from https://vutbr-my.sharepoint.com/:f:/g/personal/xdobis01_vutbr_cz/EjVoLb2eScVClf0Akp89u7kBEUPUdeRi1XYo64tL7lELWg?e=JEaHHX
 
+Update 12.4.
+
+New video data set can be downloaded in folders cor_LSTM_train,cor_LSTM_test containing 68 and 35 unique sequences in image form. 
+
+New examples of inference on test video data set images can be donwloaded in cor_RESULTS_comparison directory.
+
 ### Prerequisites
 
 Using pip install following prerequisites, pip will download everything else needed automatically. If you want to do it manually, see full list in file prerequisities.txt
@@ -27,7 +33,17 @@ python Recognition_net.py --data_folder C:\Python\TEST\testData\Excelobr --save_
 ```
 ### Examples 
 
-Are in folder Examples, for all CORAL weights data sets. Performance of weights is not consistent, retraining CORAL weights and combining it with temporal information in video is next goal of this work.
+Are in folder Examples, for all original authors CORAL weights data sets. Performance of weights is not consistent, retraining CORAL weights and combining it with temporal information in video is next goal of this work.
+
+### Update 12.4.
+
+New scripts,weights,video data set and examples were added.
+* **New cor_weights** cor_weights have now newUTK (1-100) weights and their LSTM modified version
+* **New cor_src** cor_src has now two new architectures one for each new CORAL weight
+* **Recognition_net_newUTK.py** uses weights trained on whole age range (1-100) of UTK data set, therefore has no option to choose other CORAL weights (original authors implementation could not cover age 100, so new architecture==>new script was needed)
+* **Recognition_net_LSTM.py** uses weights of Recognition_net_newUTK script, but architecture was modified with two LSTM layers which were then independently trained on video data set. Only used on video in form of image time series. First 19 images do not have age prediction. Prediction can have bad results passages between 2 persons. Usable only on one person per image.
+* **New video data set** training data set in folder cor_LSTM_train and test data set in cor_LSTM_test, created from several videos of SoulPancake channel on Youtube https://www.youtube.com/playlist?list=PLzvRx_johoA-07L3F3FeTw5TrM7IY_kWb
+* **New examples** in folder cor_RESULTS_comparison, there are 3 folders containing cor_LSTM_test images analyzed by scripts Recognition_net.py-Authors_weights, Recognition_net_newUTK.py-Original, Recognition_net_LSTM.py-Modified
 
 ## Authors
 

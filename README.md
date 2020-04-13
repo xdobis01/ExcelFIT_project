@@ -34,7 +34,7 @@ python Recognition_net.py --data_folder C:\Python\TEST\testData\Excelobr --save_
 ```
 ### Examples 
 
-Folder Old Examples, for all original authors CORAL weights data sets. Performance of weights is not consistent, retraining CORAL weights and combining it with temporal information in video is next goal of this work.
+Folder Examples, for all original authors CORAL weights data sets. Performance of weights is not consistent, retraining CORAL weights and combining it with temporal information in video is next goal of this work.
 
 New examples are in folder cor_RESULTS_comparison, they need to be downloaded first, or download and predict test video data set folder cor_LSTM_test with each script (paths to images in cor_LSTM_test and to save directory cor_RESULTS_comparison are in scripts by default).
 

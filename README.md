@@ -21,6 +21,7 @@ pip install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/wh
 pip install opencv-python
 pip install keras
 pip install tensorflow
+pip install natsort
 ```
 
 ### Directory inference 

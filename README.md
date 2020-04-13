@@ -1,4 +1,4 @@
-# ExcelFIT_project Automated Human Recognition
+# ExcelFIT Submission ID 35 Automated Human Recognition
 
 This code allows you to iterate over folder of images to detect location of human faces and their subsequent facial analysis. Facial analysis comprises of age, gender and emotion prediction  
 
@@ -32,9 +32,9 @@ Directory with images and directory to save results is mandatory input. Optional
 python Recognition_net.py --data_folder C:\Python\TEST\testData\Excelobr --save_folder ./TEST/ --RetinaFace_arch MobileNet --CORAL_weights UTK --device cpu
 
 ```
-### (Old) Examples 
+### Examples 
 
-Are in folder Examples, for all original authors CORAL weights data sets. Performance of weights is not consistent, retraining CORAL weights and combining it with temporal information in video is next goal of this work.
+Folder Old Examples, for all original authors CORAL weights data sets. Performance of weights is not consistent, retraining CORAL weights and combining it with temporal information in video is next goal of this work.
 
 New examples are in folder cor_RESULTS_comparison, they need to be downloaded first, or download and predict test video data set folder cor_LSTM_test with each script (paths to images in cor_LSTM_test and to save directory cor_RESULTS_comparison are in scripts by default).
 

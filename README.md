@@ -4,13 +4,19 @@ This code allows you to iterate over folder of images to detect location of huma
 
 ## Getting Started
 
-Please download folder cor_weights and ret_weights to your project directory, from https://vutbr-my.sharepoint.com/:f:/g/personal/xdobis01_vutbr_cz/EjVoLb2eScVClf0Akp89u7kBEUPUdeRi1XYo64tL7lELWg?e=JEaHHX
+Please download folder cor_weights and ret_weights to your project directory, from https://vutbr-my.sharepoint.com/:f:/g/personal/xdobis01_vutbr_cz/EjVoLb2eScVClf0Akp89u7kB_OrZ8VWC6zk7aIk7ECQScg?e=gUAMUh
 
 Update 12.4.
 
 New video data set can be downloaded in folders cor_LSTM_train,cor_LSTM_test containing 68 and 35 unique sequences in image form. 
 
 New examples of inference on test video data set images can be donwloaded in cor_RESULTS_comparison directory.
+
+Update 3.5.
+
+Greatly expanded training data set for LSTM training.
+
+Video for ExcelFIT, showcasing solution and imroved age prediction with LSTM layers.
 
 ### Prerequisites
 

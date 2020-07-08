@@ -1,6 +1,6 @@
 # ExcelFIT Submission ID 35 Automated Human Recognition
 
-modif
+mod
 
 This code allows you to iterate over folder of images to detect location of human faces and their subsequent facial analysis. Facial analysis comprises of age, gender and emotion prediction  
 
